@@ -1,0 +1,13 @@
+<h5>Fecha/hora ult. actualizacion: {{hour}}</h5>
+<mat-accordion class="example-headers-align">
+ <div *ngFor='let question of questions'>
+    <mat-expansion-panel  hideToggle>
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          <h4>{{ question.index}}</h4>
+        </mat-panel-title>
+      </mat-expansion-panel-header>
+      <div [innerHTML]="question.value"></div>
+    </mat-expansion-panel>
+  </div>
+</mat-accordion>
