@@ -13,8 +13,6 @@ export class ExpansionStepsExample implements OnInit
 
   public questions: Question;
 
-  public hour: String;
-
   constructor(private questionsService: QuestionsService) 
   {
 
@@ -23,9 +21,7 @@ export class ExpansionStepsExample implements OnInit
   ngOnInit() 
   {
     
-    this.questionsService.getQuestions().subscribe(data => (this.questions = data[0].result));
-	
-    this.questionsService.getQuestions().subscribe(data => (this.hour = data[0].updated));
+    this.questionsService.getQuestions().subscribe(data => (this.questions = data));
   
   }
 
